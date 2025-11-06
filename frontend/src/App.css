@@ -1,0 +1,70 @@
+@tailwind utilities;
+
+/* === CUSTOM ENHANCED STYLES (optional but recommended) === */
+/* Create this file if you want even more polish: src/enhanced_notes_styles.css */
+/* @import './enhanced_notes_styles.css'; */
+
+/* === GLOBAL RESET & BEAUTIFUL DEFAULTS === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: transparent !important; /* Let our gradient backgrounds shine */
+  color: inherit;
+}
+
+#root {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === REMOVE UGLY DEFAULTS === */
+button, input, textarea, select {
+  font-family: inherit;
+}
+
+/* === FOCUS STYLES (accessible + pretty) === */
+:focus-visible {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.5);
+}
+
+/* === SCROLLBAR (optional sexy touch) === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.5);
+}
+
+/* === DARK MODE AUTO (Tailwind handles it, but this helps) === */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: rgba(167, 139, 250, 0.4);
+  }
+}
