@@ -14,7 +14,7 @@ const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !GROQ_API_KEY) {
-  console.error('❌ Missing env vars. Please set SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, and GROQ_API_KEY');
+  console.error(' Missing env vars. Please set SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, and GROQ_API_KEY');
   process.exit(1);
 }
 
@@ -84,7 +84,7 @@ app.post('/api/summarize-note', async (req, res) => {
         max_tokens: 250,
       }),
     });
-
+   
     const groqJson = await groqRes.json();
 
     if (!groqRes.ok) {

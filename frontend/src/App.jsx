@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { supabase } from './services/supabaseClient';
 import SignIn from './components/SignIn';
 import NotesDashboard from './components/NotesDashboard';
+import './index.css'
 import toast, { Toaster } from 'react-hot-toast';
 
 export default function App(){
