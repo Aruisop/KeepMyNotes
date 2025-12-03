@@ -3,6 +3,7 @@ import { supabase } from '../services/supabaseClient';
 import { summarizeNoteServer } from '../services/api';
 import toast, { Toaster } from 'react-hot-toast';
 
+
 export default function NotesDashboard({ session }) {
   const [notes, setNotes] = useState([]);
   const [title, setTitle] = useState('');
@@ -104,7 +105,6 @@ export default function NotesDashboard({ session }) {
     }
   }
 
-  // 🧭 Logout Function
   async function handleLogout() {
     const { error } = await supabase.auth.signOut();
     if (error) {
